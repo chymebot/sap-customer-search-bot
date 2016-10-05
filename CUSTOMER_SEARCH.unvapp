@@ -1,0 +1,2042 @@
+{
+  "Properties": {
+    "LIBRARY": "true",
+    "PACKAGE": "com.chyme.customer",
+    "DESCRIPTION": "Customer Search",
+    "LANGUAGE": "JAVA",
+    "RELEASE_VERSION": "1.0",
+    "ID": "25529cc8-47d0-4683-90f1-37661a10b0d2",
+    "DATA_FORMAT": "JSON",
+    "VENDOR": "Unvired",
+    "LIB_APP": "CHYME",
+    "CHYME": "true",
+    "VERSION": "1.0",
+    "NAME": "CUSTOMER_SEARCH"
+  },
+  "Systems": [
+    {
+      "Properties": {
+        "PROTOCOL": "http",
+        "SERVER": "192.168.98.202",
+        "APPLICATION": "CUSTOMER_SEARCH",
+        "USER": "chymeDeveloper",
+        "SERVER_ID": "SVR558809492539",
+        "DESCRIPTION": "UMP Server",
+        "AUTH_TOKEN": "5zzx334srl2up6zf4app20k443tyir7h9bchyvrp",
+        "NAMESPACE": "UNVIRED",
+        "TYPE": "ME",
+        "SYNC_PORT": "8080",
+        "PASSWORD": "",
+        "NAME": "ME"
+      },
+      "Metadata": {
+        "BusinessEntity": [
+          {
+            "NAME": "BE_SearchCustomer",
+            "HEADER": "SearchCustomer_HEADER",
+            "ATTACHMENT": "false",
+            "SAVE": "true",
+            "TYPE": "Generated"
+          },
+          {
+            "NAME": "CUSTOMER",
+            "HEADER": "CUSTOMER_HEADER",
+            "ATTACHMENT": "false",
+            "SAVE": "true",
+            "TYPE": "Application"
+          }
+        ]
+      },
+      "Types": [
+        {
+          "Properties": {
+            "NAME": "BE_SearchCustomer",
+            "DESCRIPTION": "Search Customer"
+          },
+          "Element": [
+            {
+              "Properties": {
+                "DESCRIPTION": "",
+                "DECORATION": "",
+                "NAME": "BE_SearchCustomer",
+                "TYPE": "Complex"
+              },
+              "Element": [
+                {
+                  "Properties": {
+                    "NAME": "SearchCustomer_HEADER",
+                    "TYPE": "Complex"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "FRACTION": "0",
+                        "MANDATORY": "true",
+                        "LENGTH": "0",
+                        "CLIENT_TYPE": "TEXT",
+                        "XSD_TYPE": "STRING",
+                        "KEY": "false",
+                        "DEFAULT": "",
+                        "DESCRIPTION": "Customer No.",
+                        "NATIVE_TYPE": "STRING",
+                        "TYPE": "Simple",
+                        "NAME": "CUSTOMER_NO"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Properties": {
+            "NAME": "CUSTOMER",
+            "DESCRIPTION": "Customer"
+          },
+          "Element": [
+            {
+              "Properties": {
+                "DESCRIPTION": "Customer",
+                "DECORATION": "",
+                "NAME": "CUSTOMER",
+                "TYPE": "Complex"
+              },
+              "Element": [
+                {
+                  "Properties": {
+                    "DESCRIPTION": "Customer Details",
+                    "NAME": "CUSTOMER_HEADER",
+                    "TYPE": "Complex"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "KEY": "true",
+                        "DESCRIPTION": "Customer No.",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "MANDATORY": "true",
+                        "NAME": "CUSTOMER_NO",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "Name",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "NAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "House No.",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "HOUSE_NO",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "Street",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "STREET",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "City",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "CITY",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "Postal Code",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "POSTAL_CODE",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "Country",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "COUNTRY",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Functions": [
+        {
+          "Properties": {
+            "DESCRIPTION": "Customer Search",
+            "ACTION": "Get",
+            "NAME": "COMMAND_SEARCHCUSTOMER",
+            "TYPE": "Action"
+          },
+          "Input": [
+            "BE_SearchCustomer"
+          ],
+          "Output": [
+            "CUSTOMER"
+          ],
+          "Interfaces": [
+            {
+              "SYSTEM": "SAP_ERP",
+              "FUNCTION": "ISA_CUSTOMER_SEARCH"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Properties": {
+        "PROTOCOL": "http",
+        "SERVER": "192.168.98.169",
+        "USER": "SOURABH",
+        "DESCRIPTION": "Chyme Server",
+        "TYPE": "CHYME",
+        "SYNC_PORT": "8080",
+        "NAMESPACE": "UNVIRED",
+        "PASSWORD": "",
+        "NAME": "CHYME"
+      },
+      "Metadata": {},
+      "Types": [],
+      "Functions": []
+    },
+    {
+      "Properties": {
+        "PASSWD": "",
+        "USER": "INDUSER",
+        "ASHOST": "192.168.98.250",
+        "DESCRIPTION": "SAP ERP",
+        "TYPE": "SAP_ABAP",
+        "R3NAME": "IED",
+        "SYSNR": "00",
+        "CLIENT": "800",
+        "IMAGE": "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\u003d",
+        "NAME": "SAP_ERP",
+        "ALIAS": [
+          "saperp"
+        ]
+      },
+      "Metadata": {
+        "RFCFunction": [
+          {
+            "NAME": "ISA_CUSTOMER_SEARCH",
+            "DESC": "ISA_CUSTOMER_SEARCH",
+            "RFCParameter": [
+              {
+                "NAME": "ADDRESS_DATA",
+                "DESC": "",
+                "INDEX": "0",
+                "TYPE": "17",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CUSTOMER_FIND",
+                "DIRECTION": "0",
+                "RFCField": [
+                  {
+                    "NAME": "MC_NAME",
+                    "DESC": "Name (field NAME1) in upper case for matchcode",
+                    "INDEX": "0",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "MC_FIRSTNAME",
+                    "DESC": "First name in upper case for search help",
+                    "INDEX": "1",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "SORT1",
+                    "DESC": "Search Term 1",
+                    "INDEX": "2",
+                    "TYPE": "0",
+                    "LENGTH": "20",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "SORT2",
+                    "DESC": "Search Term 2",
+                    "INDEX": "3",
+                    "TYPE": "0",
+                    "LENGTH": "20",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "MC_CITY1",
+                    "DESC": "City name in upper case for search help",
+                    "INDEX": "4",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "POST_CODE1",
+                    "DESC": "City postal code",
+                    "INDEX": "5",
+                    "TYPE": "0",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "MC_STREET",
+                    "DESC": "Street name in upper case for search help",
+                    "INDEX": "6",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "HOUSE_NUM1",
+                    "DESC": "House Number",
+                    "INDEX": "7",
+                    "TYPE": "0",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "COUNTRY",
+                    "DESC": "Country Key",
+                    "INDEX": "8",
+                    "TYPE": "0",
+                    "LENGTH": "3",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "REGION",
+                    "DESC": "Region (State, Province, County)",
+                    "INDEX": "9",
+                    "TYPE": "0",
+                    "LENGTH": "3",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "NAME_L_LNG",
+                    "DESC": "Last name",
+                    "INDEX": "10",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "NAME_F_LNG",
+                    "DESC": "First name",
+                    "INDEX": "11",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "CITY1_LNG",
+                    "DESC": "City",
+                    "INDEX": "12",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  },
+                  {
+                    "NAME": "STREET_LNG",
+                    "DESC": "Street",
+                    "INDEX": "13",
+                    "TYPE": "0",
+                    "LENGTH": "60",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "0"
+                  }
+                ]
+              },
+              {
+                "NAME": "CUSTOMER_NUMBER",
+                "DESC": "",
+                "INDEX": "1",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "DISTR_CHAN_RES",
+                "DESC": "",
+                "INDEX": "2",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "DIVISION_RES",
+                "DESC": "",
+                "INDEX": "3",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "EMAIL",
+                "DESC": "",
+                "INDEX": "4",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "MAX_HITS",
+                "DESC": "",
+                "INDEX": "5",
+                "TYPE": "6",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "NUM",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "OOB_SCENARIO",
+                "DESC": "",
+                "INDEX": "6",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "PARTNER",
+                "DESC": "",
+                "INDEX": "7",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "PARVW",
+                "DESC": "",
+                "INDEX": "8",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "SALES_ORGANIZATION_RES",
+                "DESC": "",
+                "INDEX": "9",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "TELEPHONE",
+                "DESC": "",
+                "INDEX": "10",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "USER",
+                "DESC": "",
+                "INDEX": "11",
+                "TYPE": "0",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CHAR",
+                "DIRECTION": "0"
+              },
+              {
+                "NAME": "RETURN",
+                "DESC": "",
+                "INDEX": "12",
+                "TYPE": "17",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "BAPIRETURN",
+                "DIRECTION": "1",
+                "RFCField": [
+                  {
+                    "NAME": "TYPE",
+                    "DESC": "Message type: S Success, E Error, W Warning, I Info, A Abort",
+                    "INDEX": "0",
+                    "TYPE": "0",
+                    "LENGTH": "1",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "CODE",
+                    "DESC": "Message code",
+                    "INDEX": "1",
+                    "TYPE": "0",
+                    "LENGTH": "5",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "MESSAGE",
+                    "DESC": "Message Text",
+                    "INDEX": "2",
+                    "TYPE": "0",
+                    "LENGTH": "220",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "LOG_NO",
+                    "DESC": "Application log: log number",
+                    "INDEX": "3",
+                    "TYPE": "0",
+                    "LENGTH": "20",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "LOG_MSG_NO",
+                    "DESC": "Application log: Internal message serial number",
+                    "INDEX": "4",
+                    "TYPE": "6",
+                    "LENGTH": "6",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "NUM",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "MESSAGE_V1",
+                    "DESC": "Message Variable",
+                    "INDEX": "5",
+                    "TYPE": "0",
+                    "LENGTH": "50",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "MESSAGE_V2",
+                    "DESC": "Message Variable",
+                    "INDEX": "6",
+                    "TYPE": "0",
+                    "LENGTH": "50",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "MESSAGE_V3",
+                    "DESC": "Message Variable",
+                    "INDEX": "7",
+                    "TYPE": "0",
+                    "LENGTH": "50",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  },
+                  {
+                    "NAME": "MESSAGE_V4",
+                    "DESC": "Message Variable",
+                    "INDEX": "8",
+                    "TYPE": "0",
+                    "LENGTH": "50",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "1"
+                  }
+                ]
+              },
+              {
+                "NAME": "CUSTOMERS_RESULTS",
+                "DESC": "",
+                "INDEX": "13",
+                "TYPE": "99",
+                "LENGTH": "0",
+                "DECIMAL": "0",
+                "SAP_TYPE": "CUSTOMER_FOUND",
+                "DIRECTION": "3",
+                "RFCField": [
+                  {
+                    "NAME": "ADDR_TYPE",
+                    "DESC": "Addresses: Address type",
+                    "INDEX": "0",
+                    "TYPE": "0",
+                    "LENGTH": "1",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "KUNNR",
+                    "DESC": "Customer Number 1",
+                    "INDEX": "1",
+                    "TYPE": "0",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "PARNR",
+                    "DESC": "Number of contact person",
+                    "INDEX": "2",
+                    "TYPE": "6",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "NUM",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "NAME",
+                    "DESC": "Name 1",
+                    "INDEX": "3",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "FIRSTNAME",
+                    "DESC": "First name",
+                    "INDEX": "4",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "STREET",
+                    "DESC": "Street",
+                    "INDEX": "5",
+                    "TYPE": "0",
+                    "LENGTH": "60",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "CITY1",
+                    "DESC": "City",
+                    "INDEX": "6",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "MC_NAME",
+                    "DESC": "Name (field NAME1) in upper case for matchcode",
+                    "INDEX": "7",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "MC_FIRSTNAME",
+                    "DESC": "First name in upper case for search help",
+                    "INDEX": "8",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "SORT1",
+                    "DESC": "Search Term 1",
+                    "INDEX": "9",
+                    "TYPE": "0",
+                    "LENGTH": "20",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "SORT2",
+                    "DESC": "Search Term 2",
+                    "INDEX": "10",
+                    "TYPE": "0",
+                    "LENGTH": "20",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "MC_CITY1",
+                    "DESC": "City name in upper case for search help",
+                    "INDEX": "11",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "POST_CODE1",
+                    "DESC": "City postal code",
+                    "INDEX": "12",
+                    "TYPE": "0",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "MC_STREET",
+                    "DESC": "Street name in upper case for search help",
+                    "INDEX": "13",
+                    "TYPE": "0",
+                    "LENGTH": "25",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "HOUSE_NUM1",
+                    "DESC": "House Number",
+                    "INDEX": "14",
+                    "TYPE": "0",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "COUNTRY",
+                    "DESC": "Country Key",
+                    "INDEX": "15",
+                    "TYPE": "0",
+                    "LENGTH": "3",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "REGION",
+                    "DESC": "Region (State, Province, County)",
+                    "INDEX": "16",
+                    "TYPE": "0",
+                    "LENGTH": "3",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "NAME_L_LNG",
+                    "DESC": "Last name",
+                    "INDEX": "17",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "NAME_F_LNG",
+                    "DESC": "First name",
+                    "INDEX": "18",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "CITY1_LNG",
+                    "DESC": "City",
+                    "INDEX": "19",
+                    "TYPE": "0",
+                    "LENGTH": "40",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "STREET_LNG",
+                    "DESC": "Street",
+                    "INDEX": "20",
+                    "TYPE": "0",
+                    "LENGTH": "60",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "POST_CODE2",
+                    "DESC": "PO Box postal code",
+                    "INDEX": "21",
+                    "TYPE": "0",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  },
+                  {
+                    "NAME": "PO_BOX",
+                    "DESC": "PO Box",
+                    "INDEX": "22",
+                    "TYPE": "0",
+                    "LENGTH": "10",
+                    "DECIMAL": "0",
+                    "SAP_TYPE": "CHAR",
+                    "DIRECTION": "3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "Types": [
+        {
+          "Properties": {
+            "NAME": "ISA_CUSTOMER_SEARCH.INPUT",
+            "DESCRIPTION": "Input"
+          },
+          "Element": [
+            {
+              "Properties": {
+                "DESCRIPTION": "",
+                "DECORATION": "",
+                "NAME": "ISA_CUSTOMER_SEARCH.INPUT",
+                "TYPE": "Complex"
+              },
+              "Element": [
+                {
+                  "Properties": {
+                    "NAME": "ADDRESS_DATA",
+                    "TYPE": "Complex"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Name (field NAME1) in upper case for matchcode",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_NAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_FIRSTNAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Search Term 1",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "20",
+                        "NAME": "SORT1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Search Term 2",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "20",
+                        "NAME": "SORT2",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_CITY1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City postal code",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "POST_CODE1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_STREET",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "House Number",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "HOUSE_NUM1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Country Key",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "3",
+                        "NAME": "COUNTRY",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Region (State, Province, County)",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "3",
+                        "NAME": "REGION",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Last name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME_L_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME_F_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "CITY1_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "60",
+                        "NAME": "STREET_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "10",
+                    "NAME": "CUSTOMER_NUMBER",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "2",
+                    "NAME": "DISTR_CHAN_RES",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "2",
+                    "NAME": "DIVISION_RES",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "241",
+                    "NAME": "EMAIL",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "6",
+                    "LENGTH": "4",
+                    "NAME": "MAX_HITS",
+                    "XSD_TYPE": "LONG",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "1",
+                    "NAME": "OOB_SCENARIO",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "10",
+                    "NAME": "PARTNER",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "2",
+                    "NAME": "PARVW",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "4",
+                    "NAME": "SALES_ORGANIZATION_RES",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "30",
+                    "NAME": "TELEPHONE",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "DEFAULT": "",
+                    "FRACTION": "0",
+                    "NATIVE_TYPE": "0",
+                    "LENGTH": "12",
+                    "NAME": "USER",
+                    "XSD_TYPE": "STRING",
+                    "TYPE": "Simple"
+                  }
+                },
+                {
+                  "Properties": {
+                    "NAME": "CUSTOMERS_RESULTS",
+                    "TYPE": "Complex"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Addresses: Address type",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "1",
+                        "NAME": "ADDR_TYPE",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Customer Number 1",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "KUNNR",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Number of contact person",
+                        "NATIVE_TYPE": "6",
+                        "LENGTH": "10",
+                        "NAME": "PARNR",
+                        "XSD_TYPE": "LONG",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Name 1",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "FIRSTNAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "60",
+                        "NAME": "STREET",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "CITY1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Name (field NAME1) in upper case for matchcode",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_NAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_FIRSTNAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Search Term 1",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "20",
+                        "NAME": "SORT1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Search Term 2",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "20",
+                        "NAME": "SORT2",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_CITY1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City postal code",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "POST_CODE1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_STREET",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "House Number",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "HOUSE_NUM1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Country Key",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "3",
+                        "NAME": "COUNTRY",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Region (State, Province, County)",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "3",
+                        "NAME": "REGION",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Last name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME_L_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME_F_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "CITY1_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "60",
+                        "NAME": "STREET_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "PO Box postal code",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "POST_CODE2",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "PO Box",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "PO_BOX",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Properties": {
+            "NAME": "ISA_CUSTOMER_SEARCH.OUTPUT",
+            "DESCRIPTION": "Output"
+          },
+          "Element": [
+            {
+              "Properties": {
+                "DESCRIPTION": "",
+                "DECORATION": "",
+                "NAME": "ISA_CUSTOMER_SEARCH.OUTPUT",
+                "TYPE": "Complex"
+              },
+              "Element": [
+                {
+                  "Properties": {
+                    "NAME": "RETURN",
+                    "TYPE": "Complex"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Message type: S Success, E Error, W Warning, I Info, A Abort",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "1",
+                        "NAME": "TYPE",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Message code",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "5",
+                        "NAME": "CODE",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Message Text",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "220",
+                        "NAME": "MESSAGE",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Application log: log number",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "20",
+                        "NAME": "LOG_NO",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Application log: Internal message serial number",
+                        "NATIVE_TYPE": "6",
+                        "LENGTH": "6",
+                        "NAME": "LOG_MSG_NO",
+                        "XSD_TYPE": "LONG",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Message Variable",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "50",
+                        "NAME": "MESSAGE_V1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Message Variable",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "50",
+                        "NAME": "MESSAGE_V2",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Message Variable",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "50",
+                        "NAME": "MESSAGE_V3",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Message Variable",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "50",
+                        "NAME": "MESSAGE_V4",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Properties": {
+                    "NAME": "CUSTOMERS_RESULTS",
+                    "TYPE": "Complex"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Addresses: Address type",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "1",
+                        "NAME": "ADDR_TYPE",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Customer Number 1",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "KUNNR",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Number of contact person",
+                        "NATIVE_TYPE": "6",
+                        "LENGTH": "10",
+                        "NAME": "PARNR",
+                        "XSD_TYPE": "LONG",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Name 1",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "FIRSTNAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "60",
+                        "NAME": "STREET",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "CITY1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Name (field NAME1) in upper case for matchcode",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_NAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_FIRSTNAME",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Search Term 1",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "20",
+                        "NAME": "SORT1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Search Term 2",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "20",
+                        "NAME": "SORT2",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_CITY1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City postal code",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "POST_CODE1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street name in upper case for search help",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "25",
+                        "NAME": "MC_STREET",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "House Number",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "HOUSE_NUM1",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Country Key",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "3",
+                        "NAME": "COUNTRY",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Region (State, Province, County)",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "3",
+                        "NAME": "REGION",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Last name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME_L_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "First name",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "NAME_F_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "City",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "40",
+                        "NAME": "CITY1_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "Street",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "60",
+                        "NAME": "STREET_LNG",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "PO Box postal code",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "POST_CODE2",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DEFAULT": "",
+                        "FRACTION": "0",
+                        "DESCRIPTION": "PO Box",
+                        "NATIVE_TYPE": "0",
+                        "LENGTH": "10",
+                        "NAME": "PO_BOX",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Functions": [
+        {
+          "Properties": {
+            "ID": "ISA_CUSTOMER_SEARCH",
+            "DESCRIPTION": "",
+            "ACTION": "Custom",
+            "NAME": "ISA_CUSTOMER_SEARCH",
+            "TYPE": "Application"
+          },
+          "Input": [
+            "ISA_CUSTOMER_SEARCH.INPUT"
+          ],
+          "Output": [
+            "ISA_CUSTOMER_SEARCH.OUTPUT"
+          ]
+        }
+      ]
+    }
+  ],
+  "Devices": [],
+  "Mappings": [
+    {
+      "Properties": {
+        "DIRECTION": "Input"
+      },
+      "Source": {
+        "SYSTEM": "ME",
+        "FUNCTION": "COMMAND_SEARCHCUSTOMER",
+        "TYPE": "BE_SearchCustomer"
+      },
+      "Destination": {
+        "SYSTEM": "SAP_ERP",
+        "FUNCTION": "ISA_CUSTOMER_SEARCH",
+        "TYPE": "ISA_CUSTOMER_SEARCH.INPUT"
+      },
+      "Relations": [
+        {
+          "TYPE": "Header",
+          "FROM": "BE_SearchCustomer~~SearchCustomer_HEADER",
+          "TO": "ISA_CUSTOMER_SEARCH.INPUT"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "BE_SearchCustomer~~SearchCustomer_HEADER~~CUSTOMER_NO",
+          "TO": "ISA_CUSTOMER_SEARCH.INPUT~~CUSTOMER_NUMBER"
+        }
+      ]
+    },
+    {
+      "Properties": {
+        "DIRECTION": "Output"
+      },
+      "Source": {
+        "SYSTEM": "ME",
+        "FUNCTION": "COMMAND_SEARCHCUSTOMER",
+        "TYPE": "CUSTOMER"
+      },
+      "Destination": {
+        "SYSTEM": "SAP_ERP",
+        "FUNCTION": "ISA_CUSTOMER_SEARCH",
+        "TYPE": "ISA_CUSTOMER_SEARCH.OUTPUT"
+      },
+      "Relations": [
+        {
+          "TYPE": "Root",
+          "FROM": "CUSTOMER",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT"
+        },
+        {
+          "TYPE": "Header",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER~~NAME",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS~~NAME"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER~~STREET",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS~~STREET"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER~~COUNTRY",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS~~COUNTRY"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER~~CUSTOMER_NO",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS~~KUNNR"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER~~CITY",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS~~CITY1"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER~~POSTAL_CODE",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS~~POST_CODE1"
+        },
+        {
+          "TYPE": "HeaderField",
+          "FROM": "CUSTOMER~~CUSTOMER_HEADER~~HOUSE_NO",
+          "TO": "ISA_CUSTOMER_SEARCH.OUTPUT~~CUSTOMERS_RESULTS~~HOUSE_NUM1"
+        }
+      ]
+    }
+  ],
+  "DebugSettings": {},
+  "Decorations": [],
+  "Events": [],
+  "Commands": [
+    {
+      "CommandHandler": "COMMAND_SEARCHCUSTOMER",
+      "Properties": {
+        "DESCRIPTION": "Search Customer",
+        "COMMAND_HELP": "Search for Customer ($CUSTOMER_NO$)",
+        "NAME": "SearchCustomer"
+      },
+      "Parameters": [
+        {
+          "Properties": {
+            "SEQUENCE_NO": "1",
+            "DESCRIPTION": "Customer No.",
+            "MANDATORY": "true",
+            "NAME": "CUSTOMER_NO",
+            "TYPE": "Text"
+          },
+          "Values": []
+        }
+      ],
+      "Attributes": [],
+      "Systems": []
+    }
+  ],
+  "Recipes": [
+    {
+      "Properties": {
+        "CHANGED_ON": "1475643079625",
+        "DESCRIPTION": "Search Customer",
+        "CREATED_ON": "1475241192674",
+        "TYPE": "Command",
+        "ID": "d780c61afa0e49839d6212ca1e59bb09",
+        "TAGS": "Customer, Search",
+        "CHECKSUM": "3770470231",
+        "IMAGE": "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\u003d",
+        "NAME": "SearchCustomer"
+      },
+      "Attributes": [],
+      "System": {
+        "NAME": "SAP_ERP",
+        "ALIAS": "saperp"
+      },
+      "Command": "SearchCustomer",
+      "Recipes": []
+    }
+  ]
+}
