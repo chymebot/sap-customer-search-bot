@@ -13,7 +13,7 @@ import com.unvired.ump.agent.ISAPRFCRequest;
 import com.unvired.ump.agent.ISAPRFCResponse;
 import com.unvired.ump.agent.IUMPResponse;
 
-public abstract class ABSTRACT_COMMAND_SEARCHCUSTOMER extends BotService {
+public abstract class ABSTRACT_COMMAND_SEARCHCUSTOMERSSAMPLE extends BotService {
 	protected com.chyme.customer.gen.be.BE_SearchCustomersSample inputBE_SearchCustomersSample;
 	protected ISA_CUSTOMER_SEARCH isa_customer_search;
 

@@ -5,24 +5,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import com.chyme.customer.gen.be.BE_SearchCustomer;
+import com.chyme.customer.gen.be.BE_SearchCustomersSample;
 import com.chyme.customer.gen.be.CUSTOMER;
 import com.unvired.lib.utility.BusinessEntity;
 import com.unvired.lib.utility.Structure;
 
 public class BEUtility
 {
-	public static List<BE_SearchCustomer> getBE_SearchCustomer(List<BusinessEntity> beList)
+	public static List<BE_SearchCustomersSample> getBE_SearchCustomersSample(List<BusinessEntity> beList)
 	{
-		ArrayList<BE_SearchCustomer> typedBEs = new ArrayList<BE_SearchCustomer>();
+		ArrayList<BE_SearchCustomersSample> typedBEs = new ArrayList<BE_SearchCustomersSample>();
 
 		if(beList != null)
 		{
 			for (BusinessEntity be : beList)
 			{
-				if(be.getName().equals(BE_SearchCustomer.NAME))
+				if(be.getName().equals(BE_SearchCustomersSample.NAME))
 				{
-					BE_SearchCustomer typedBE = new BE_SearchCustomer();
+					BE_SearchCustomersSample typedBE = new BE_SearchCustomersSample();
 					typedBEs.add(typedBE);
 					for (Entry<String, String> field : be.getHeader().getFieldsInOrder().entrySet())
 					{

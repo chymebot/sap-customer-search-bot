@@ -1,11 +1,11 @@
 //	Generated using Unvired Modeller - Build R-4.000.0002
 package com.chyme.customer.pa;
 
-import com.chyme.customer.gen.pa.ABSTRACT_COMMAND_SEARCHCUSTOMER;
+import com.chyme.customer.gen.pa.ABSTRACT_COMMAND_SEARCHCUSTOMERSSAMPLE;
 import com.unvired.chyme.api.Message;
 import com.unvired.lib.utility.ProcessAgentUtility;
 
-public class COMMAND_SEARCHCUSTOMER extends ABSTRACT_COMMAND_SEARCHCUSTOMER {
+public class COMMAND_SEARCHCUSTOMERSSAMPLE extends ABSTRACT_COMMAND_SEARCHCUSTOMERSSAMPLE {
 
 	public void execute() {
 		
@@ -24,7 +24,7 @@ public class COMMAND_SEARCHCUSTOMER extends ABSTRACT_COMMAND_SEARCHCUSTOMER {
 	}
 
 	protected void mapInputToISA_CUSTOMER_SEARCH_INPUT() {
-		String customerNo = inputBE_SearchCustomer.getSearchCustomer_HEADER().getCUSTOMER_NO();
+		String customerNo = inputBE_SearchCustomersSample.getSearchCustomersSample_HEADER().getCUSTOMER_NO();
 		isa_customer_search.setCUSTOMER_NUMBER(ProcessAgentUtility.alphaConversionSAPIn(customerNo, 10));
 	}
 }
