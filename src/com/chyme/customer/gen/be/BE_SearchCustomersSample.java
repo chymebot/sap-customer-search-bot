@@ -1,4 +1,4 @@
-//	Generated using Unvired Modeller - Build R-4.000.0002
+//	Generated using Unvired Modeller - Build R-4.000.0042
 package com.chyme.customer.gen.be;
 
 import java.util.ArrayList;
@@ -26,12 +26,14 @@ public class BE_SearchCustomersSample extends BusinessEntity {
 		private static final long serialVersionUID = 1L;
 		public static final String NAME = "SearchCustomersSample_HEADER";
 
-		public static final String FLD_CUSTOMER_NO = "CUSTOMER_NO";
+		public static final String FLD_customerNumber = "customerNumber";
+		public static final String FLD_customerName = "customerName";
 
 		public static final ArrayList<String> FIELDS = new ArrayList<String>();
 
 		static {
-			FIELDS.add(FLD_CUSTOMER_NO);
+			FIELDS.add(FLD_customerNumber);
+			FIELDS.add(FLD_customerName);
 		}
 
 		public SearchCustomersSample_HEADER()
@@ -39,15 +41,26 @@ public class BE_SearchCustomersSample extends BusinessEntity {
 			setName(NAME);
 		}
 
-		public String getCUSTOMER_NO()
+		public String getcustomerNumber()
 		{
-			return getField(FLD_CUSTOMER_NO);
+			return getField(FLD_customerNumber);
 		}
 
-		public void setCUSTOMER_NO(String value)
+		public void setcustomerNumber(String value)
 		{
 			if(value != null)
-				addField(FLD_CUSTOMER_NO, value);
+				addField(FLD_customerNumber, value);
+		}
+
+		public String getcustomerName()
+		{
+			return getField(FLD_customerName);
+		}
+
+		public void setcustomerName(String value)
+		{
+			if(value != null)
+				addField(FLD_customerName, value);
 		}
 
 	}

@@ -1,4 +1,4 @@
-//	Generated using Unvired Modeller - Build R-4.000.0002
+//	Generated using Unvired Modeller - Build R-4.000.0042
 package com.chyme.customer.gen.pa;
 
 import com.chyme.customer.gen.be.CUSTOMER;
@@ -49,8 +49,8 @@ public abstract class ABSTRACT_COMMAND_SEARCHCUSTOMERSSAMPLE extends BotService 
 			return;
 		}
 
-		isa_customer_search
-				.setCUSTOMER_NUMBER(inputBE_SearchCustomersSample.getSearchCustomersSample_HEADER().getCUSTOMER_NO());
+		isa_customer_search.setCUSTOMER_NUMBER(
+				inputBE_SearchCustomersSample.getSearchCustomersSample_HEADER().getcustomerNumber());
 
 	}
 
@@ -102,12 +102,7 @@ public abstract class ABSTRACT_COMMAND_SEARCHCUSTOMERSSAMPLE extends BotService 
 					continue;
 
 				recCUSTOMER_HEADER.setNAME(customers_results_s.getNAME());
-				recCUSTOMER_HEADER.setSTREET(customers_results_s.getSTREET());
-				recCUSTOMER_HEADER.setCOUNTRY(customers_results_s.getCOUNTRY());
 				recCUSTOMER_HEADER.setCUSTOMER_NO(customers_results_s.getKUNNR());
-				recCUSTOMER_HEADER.setHOUSE_NO(customers_results_s.getHOUSE_NUM1());
-				recCUSTOMER_HEADER.setCITY(customers_results_s.getCITY1());
-				recCUSTOMER_HEADER.setPOSTAL_CODE(customers_results_s.getPOST_CODE1());
 				chymeAPI.addBE(beCUSTOMER);
 			}
 		}
